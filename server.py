@@ -23,8 +23,7 @@ def top_stories():
      """
      section = request.form['section']
 
-     url = requests.get('http://api.nytimes.com/svc/topstories/v1/'+section+'.j\
-son?api-key='+api_key)
+     url = requests.get('http://api.nytimes.com/svc/topstories/v1/'+section+'.json?api-key='+api_key)
 
      return url.text
 
