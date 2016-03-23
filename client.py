@@ -17,7 +17,7 @@ endpoint_info = dict(info)
 price = int(endpoint_info['price'])
 address = str(endpoint_info['bitcoin-address'])
 
-# Array of alll the top-story sections
+# Array of all the top-story sections
 sections = ["home", "world", "national", "politics",
             "nyregion", "business", "opinion", "technology",
             "science", "health", "sports", "arts", "fashion",
