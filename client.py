@@ -36,11 +36,11 @@ def get_top_stories(section):
     response = requests.post(url=server_url+'top-stories', data=params)
 
     if response.status_code == 200:
-        to_return = response.text
+        return_response = response.text
     else:
-        to_return = str(response.status_code) + ' error'
+        return_response = str(response.status_code) + ' error'
 
-    return to_return
+    return return_response
 
 if __name__=='__main__':
     print("------------------------------------------------")
