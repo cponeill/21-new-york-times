@@ -20,8 +20,8 @@ address = str(endpoint_info['bitcoin-address'])
 # Array of all the top-story sections
 sections = ["home", "world", "national", "politics",
             "nyregion", "business", "opinion", "technology",
-            "science", "health", "sports", "arts", "fashion",
-            "dining", "travel", "magazine", "realestate"]
+            "health", "sports", "arts", "fashion", "dining", 
+            "travel", "magazine", "realestate"]
 
 
 def get_top_stories(section):
