@@ -9,6 +9,7 @@ wallet = Wallet()
 username = Config().username
 requests = BitTransferRequests(wallet, username)
 
+# Set up the server to run locally
 server_url = 'http://localhost:5000/'
 
 # Request the 402 end-points from the server and assign price and address to variables.
@@ -25,11 +26,9 @@ sections = ["home", "world", "national", "politics",
 
 
 def get_top_stories(section):
-
     params = {
         'section': section
     }
-
     response = requests.post(url=server_url+'top-stories', data=params)
     if response.status_code == 200:
         top_story = response.text
