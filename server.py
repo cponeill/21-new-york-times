@@ -1,7 +1,3 @@
-"""
-I need to clean this code up quite a bit but the basic functionality works. 
-"""
-
 # Loading developer libraries
 
 import requests
