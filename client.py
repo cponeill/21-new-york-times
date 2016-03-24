@@ -41,8 +41,11 @@ if __name__=='__main__':
     print("------------------------------------------------")
     print("Welcome to the New York Times Top Story!")
     print("------------------------------------------------")
+    
+    # loop through and print out sections
     for i in sections:
         print(i)
+    
     story = input("\nWhat section would you like to read?\n")
     nytimes_story = get_top_stories(story)
     stories = json.loads(nytimes_story)
