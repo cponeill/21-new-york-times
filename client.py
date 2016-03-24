@@ -1,7 +1,3 @@
-"""
-I need to clean this code up quite a bit but the basic functionality works. 
-"""
-
 # Loading developer libraries
 
 import json
@@ -29,18 +25,18 @@ sections = ["home", "world", "national", "politics",
 
 
 def get_top_stories(section):
+
     params = {
         'section': section
     }
 
     response = requests.post(url=server_url+'top-stories', data=params)
-
     if response.status_code == 200:
-        return_response = response.text
+        top_story = response.text
     else:
-        return_response = str(response.status_code) + ' error'
+        top_story = str(response.status_code) + ' error'
 
-    return return_response
+    return top_story
 
 if __name__=='__main__':
     print("------------------------------------------------")
@@ -49,8 +45,8 @@ if __name__=='__main__':
     for i in sections:
         print(i)
     story = input("\nWhat section would you like to read?\n")
-    top_story = get_top_stories(story)
-    stories = json.loads(top_story)
+    nytimes_story = get_top_stories(story)
+    stories = json.loads(nytimes_story)
     print("\n"+stories['results'][0]['title']+":\n"+stories['results'][0]['byline']+"\n"+stories['results'][0]['abstract']+"\n")
     print("Copy the following link to read the full story:\n" + stories['results'][0]['url']+"\n")
     print("You just sent " + str(price) + " satoshis to:\n" + address)
