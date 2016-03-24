@@ -22,11 +22,8 @@ def top_stories():
      Choose the section of the NYTimes you would like to read
      """
      section = request.form['section']
-
      url = requests.get('http://api.nytimes.com/svc/topstories/v1/'+section+'.json?api-key='+api_key)
-
      return url.text
-
 
 if __name__=='__main__':
     app.run(host='0.0.0.0', debug=True)
