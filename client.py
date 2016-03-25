@@ -38,9 +38,8 @@ def get_top_stories(section):
     return top_story
 
 if __name__=='__main__':
-    print("------------------------------------------------")
-    print("Welcome to the New York Times Top Story!")
-    print("------------------------------------------------")
+    border = "------------------------------------------------"
+    print(border + "\nWelcome to the New York Times Top Story!\n" + border)
     
     # loop through and print out sections
     for i in sections:
@@ -52,8 +51,6 @@ if __name__=='__main__':
     print("\n"+stories['results'][0]['title']+":\n"+stories['results'][0]['byline']+"\n"+stories['results'][0]['abstract']+"\n")
     print("Copy the following link to read the full story:\n" + stories['results'][0]['url']+"\n")
     print("You just sent " + str(price) + " satoshis to:\n" + address)
-    print("------------------------------------------------")
-    print("Thank you for reading the New York Times today!")
-    print("------------------------------------------------")
+    print(border + "\nThank you for reading the New York Times today!\n" + border)
 
 
