@@ -14,7 +14,7 @@ Run the server:
 
     $ python3 server.py
 
-Open another terminal and run the following commands:
+Open another terminal, change into the same directory, and run the following commands:
 
     $ python3 client.py
 
